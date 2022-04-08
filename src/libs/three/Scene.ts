@@ -29,10 +29,10 @@ export default class Scene extends TransitionsHandler {
       scene: new THREE.Scene(),
       composer: undefined,
       controls: undefined,
-    
+
       clock: new THREE.Clock(),
       frameNumber: 0,
-    
+
       units: {},
       unitsToggled: false,
     }
@@ -64,7 +64,7 @@ export default class Scene extends TransitionsHandler {
     )
     this.scene.controls = new OrbitControls(this.scene.camera, this.scene.renderer.domElement)
     this.scene.controls.enabled = false
-    this.scene.camera.position.x = -targetToCamera * 2
+    this.scene.camera.position.x = 0
     this.scene.camera.position.y = 0
     this.scene.camera.position.z = targetToCamera * 2.05
     // this.scene.camera.position.y = Math.PI / 4
@@ -112,13 +112,13 @@ export default class Scene extends TransitionsHandler {
     this.scene.frameNumber = (this.scene.frameNumber + 1) % maxFrameNumber
 
     const { left, right, top, bottom } = this.scene.renderer.domElement.getBoundingClientRect()
- 
+
     const isOffscreen =
       bottom < 0 ||
       top > this.scene.renderer.domElement.clientHeight ||
       right < 0 ||
       left > this.scene.renderer.domElement.clientWidth;
-  
+
     if (!isOffscreen || true) {
       const {
         composer,
@@ -128,7 +128,7 @@ export default class Scene extends TransitionsHandler {
         renderer,
         camera,
       } = this.scene
-  
+
       // camera.position.y = -scaleFactor * units.controls.scroll.alphaY
       // controls.target.y = -scaleFactor * units.controls.scroll.alphaY
 
@@ -141,7 +141,7 @@ export default class Scene extends TransitionsHandler {
             maxFrameNumber: maxFrameNumber,
             // react: this.props.react,
           }))
-  
+
       controls.update()
       composer.render()
       // composer.render(clock.getDelta())
@@ -168,14 +168,14 @@ export default class Scene extends TransitionsHandler {
           const unit = this?.props?.units?.[unitName]
 
           // if (!unit.disabled ^ this.scene.unitsToggled) {
-            if (unit?.unit)
-              this.scene.units[unitName] = new unit.unit({
-                ...props,
-                ...unit.args,
-                unitLoaded: () => this.unitLoaded(unitName),
-              })
-            this.scene.units[unitName].init &&
-              this.scene.units[unitName].init()
+          if (unit?.unit)
+            this.scene.units[unitName] = new unit.unit({
+              ...props,
+              ...unit.args,
+              unitLoaded: () => this.unitLoaded(unitName),
+            })
+          this.scene.units[unitName].init &&
+            this.scene.units[unitName].init()
           // }
         })
   }
@@ -194,7 +194,7 @@ export default class Scene extends TransitionsHandler {
         const unit = this.scene.units[unitName]
 
         // if (!unit.disabled ^ this.scene.unitsToggled)
-          unit?.start?.()
+        unit?.start?.()
       })
 
   start = () =>
@@ -210,7 +210,7 @@ export default class Scene extends TransitionsHandler {
       .forEach(unitName => units[unitName].dispose())
 
     //REDO THIS SHIT: units should unregister themselves
-    while(scene.children.length > 0)
+    while (scene.children.length > 0)
       scene.remove(scene.children[0])
   }
 

@@ -30,12 +30,13 @@ class Arc extends Unit {
       if (!this.loaded) {
         this.loaded = true
 
+        this.model.rotation.y = Math.PI
         if (document.body.clientWidth > document.body.clientHeight) {
-          this.model.scale.set(25.5, 25.5, 25.5)
-          this.model.position.set(-30, 0, 0)
+          this.model.scale.set(1.5, 1.5, 1.5)
+          this.model.position.set(0, -2, 0)
         } else {
-          this.model.scale.set(18.5, 18.5, 18.5)
-          this.model.position.set(-2, 0, 0)
+          this.model.scale.set(1.2, 1.2, 1.2)
+          this.model.position.set(0, -2, 0)
         }
       }
 
@@ -43,7 +44,7 @@ class Arc extends Unit {
 
       // this.model.rotation.x = Math.PI + Math.sin(alpha * 5 * Math.PI)
       // this.model.rotation.y = Math.cos(alpha * 15 * Math.PI)
-      this.model.rotation.x = alpha * 15 * Math.PI
+      // this.model.rotation.x = alpha * 15 * Math.PI
     }
   }
 

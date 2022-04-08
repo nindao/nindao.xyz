@@ -48,7 +48,7 @@
 .Background
   overflow: hidden
 
-.Page
+.SectionWithBackground
   position: relative
   width: 100%
   height: 100vh
@@ -104,11 +104,15 @@
     @extend .flex-row
     @extend .align-items-center
     background-color: $black
+    position: relative
+    z-index: 100
   .Header
+    margin-bottom: -64px
     .Logo
       width: 100px
       height: auto
   .Footer
+    margin-top: -64px
     @extend .justify-content-center
     &__link
       width: 40px
@@ -120,7 +124,7 @@
     @extend .flex-column
     overflow-x: hidden
     overflow-y: scroll
-    .Page
+    .SectionWithBackground
       position: relative
       width: 100%
       height: 100vh
