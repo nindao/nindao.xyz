@@ -112,19 +112,27 @@
       width: 100px
       height: auto
   .Footer
-    margin-top: -64px
+    // margin-top: -64px
     @extend .justify-content-center
     &__link
       width: 40px
       height: 40px
       @extend .mx-2
 
-  .Content
-    @extend .d-flex
-    @extend .flex-column
-    overflow-x: hidden
-    overflow-y: scroll
-    .SectionWithBackground
-      position: relative
-      width: 100%
-      height: 100vh
+  .Section
+    background-color: #F5F5F5
+    ul
+      list-style: none
+      li
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          top: .5em
+          left: -1em
+          background-color: #FF00FB
+          display: inline-block
+          font-weight: bold
+          width: .5em
+          height: .5em
+          border-radius: 10px
