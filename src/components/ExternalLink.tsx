@@ -12,7 +12,7 @@ export type ExternalLinkProps = {
 const ExternalLink = (props: ExternalLinkProps) => (
   <a
     className={props.className}
-    href={props.to}
+    href={(props.to.includes('http') ? '' : 'https://') + props.to}
     target={props.newTab ? "_blank" : ""}
     rel="noopener noreferrer"
   >

@@ -1,5 +1,4 @@
 import React from 'react'
-
 import _ from 'lodash'
 
 import {
@@ -26,23 +25,19 @@ class Provider extends React.Component<{}, StateType> {
   loadContentful = async () => {
     const client = createContentfulClient()
 
+    this.setState({ ready: false })
     this.setState({
-      contentfulData: [
-        await parseContentfulItems((await client.getEntries({ limit: 200, })).items),
-      ]
+      contentfulData: await parseContentfulItems((await client.getEntries({ limit: 200 })).items)
     })
+    this.setState({ ready: true })
 
-    console.log(this.state.contentfulData[0])
+    console.log(this.state.contentfulData)
 
     this.callInitializeCallbacks()
   }
 
   updateContentful = async (update: boolean = true) => {
-    this.setState({ ready: false })
-
     await this.loadContentful()
-
-    this.setState({ ready: true })
 
     update &&
       this.callInitializeCallbacks()
@@ -50,7 +45,7 @@ class Provider extends React.Component<{}, StateType> {
 
   registerInitializeCallback = (fn: Function) => {
     this.initializeCallBacks.push(fn)
-    this.state.contentfulData.length > 0 && fn()
+    !_.isEmpty(this.state.contentfulData) && fn()
   }
 
   callInitializeCallbacks = () =>
