@@ -4,19 +4,20 @@ import { Context } from './Store'
 import Header from './Header'
 import Footer from './Footer'
 import SectionWithBackground from './SectionWithBackground'
-import Background from './Background'
+// import Background from './Background'
 import Bot from './sections/Bot'
 import About from './sections/About'
+import Instructions from './sections/Instructions'
 
 import backgroundImg from '../styles/img/background.jpg'
 import logoImg from '../styles/img/logo.svg'
-import Section from './Section'
+// import Section from './Section'
 
 
 const Site: React.FC = () => {
   const store = React.useContext(Context)
-  const sections = store?.contentful?.pages?.[0]?.sections
-    ?.filter((section: any) => section.type === 'section')
+  // const sections = store?.contentful?.pages?.[0]?.sections
+  //   ?.filter((section: any) => section.type === 'section')
 
   return store.ready ?
     <div className="App">
@@ -25,7 +26,7 @@ const Site: React.FC = () => {
         backgroundImage={backgroundImg}
       >
         {/* <Background /> */}
-        <div className='container d-flex flex-row justify-content-center'>
+        <div className='container d-flex flex-row justify-content-center position-relative'>
           <div className='col-11 col-sm-4 d-flex flex-column justify-content-center'>
             <img
               src={logoImg}
@@ -39,6 +40,7 @@ const Site: React.FC = () => {
       </SectionWithBackground>
       <Bot />
       <About />
+      <Instructions />
       {/* {sections.map((section: any, index: number) =>
         <Section
           title={section.title}

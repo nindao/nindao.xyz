@@ -50,6 +50,25 @@
 .mb-32
   margin-bottom: 32px
 
+ul
+  list-style: none
+  padding-left: 1rem
+  margin-bottom: 0
+  li
+    position: relative
+    margin-bottom: 1rem
+    &::before
+      content: ''
+      position: absolute
+      top: .5em
+      left: -1em
+      background-color: #FF00FB
+      display: inline-block
+      font-weight: bold
+      width: .5em
+      height: .5em
+      border-radius: 10px
+
 .Background,
 .Viewer
   @extend .abs-child
@@ -85,8 +104,8 @@
       .ContentSlider--clicked &
         opacity: 0
 
-*
-  @extend .noselect
+// *
+//   @extend .noselect
 
 .Loader
   position: fixed
@@ -130,21 +149,6 @@
 
   .Section
     background-color: #F5F5F5
-    ul
-      list-style: none
-      li
-        position: relative
-        &::before
-          content: ''
-          position: absolute
-          top: .5em
-          left: -1em
-          background-color: #FF00FB
-          display: inline-block
-          font-weight: bold
-          width: .5em
-          height: .5em
-          border-radius: 10px
 
 .Bot
   background-color: #F1F1F1
@@ -166,3 +170,19 @@
     background-image: url(./img/line.svg)
     @extend .def-img
     z-index: -1
+
+#Instructions
+  background-color: black
+  padding: 50px 0 30px
+  *
+    color: white
+  .tile
+    height: 100%
+    background: rgba(241, 241, 241, 0.1)
+    border: 1px solid rgba(255, 255, 255, 0.1)
+    border-radius: 24px
+    padding: 50px 20px
+    @include media-breakpoint-down(lg)
+      padding: 30px 18px
+    @include media-breakpoint-down(md)
+      padding: 26px 15px
