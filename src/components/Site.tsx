@@ -8,6 +8,7 @@ import SectionWithBackground from './SectionWithBackground'
 import Bot from './sections/Bot'
 import About from './sections/About'
 import Instructions from './sections/Instructions'
+import FAQ from './sections/FAQ'
 
 import backgroundImg from '../styles/img/background.jpg'
 import logoImg from '../styles/img/logo.svg'
@@ -41,6 +42,7 @@ const Site: React.FC = () => {
       <Bot />
       <About />
       <Instructions />
+      <FAQ />
       {/* {sections.map((section: any, index: number) =>
         <Section
           title={section.title}

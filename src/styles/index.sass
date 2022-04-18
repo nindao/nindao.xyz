@@ -9,7 +9,7 @@
   width: 100%
   height: 100%
 
-.noselect
+.no-select
   -webkit-touch-callout: none /* iOS Safari */
   -webkit-user-select: none /* Safari */
   -khtml-user-select: none /* Konqueror HTML */
@@ -105,7 +105,7 @@ ul
         opacity: 0
 
 // *
-//   @extend .noselect
+//   @extend .no-select
 
 .Loader
   position: fixed
@@ -186,3 +186,70 @@ ul
       padding: 30px 18px
     @include media-breakpoint-down(md)
       padding: 26px 15px
+
+#FAQ
+  background-color: black
+  padding-bottom: 100px
+  *
+    color: white
+  .title
+    background-color: rgba(255, 255, 255, 0.1)
+    border: 1px solid rgba(255, 255, 255, 0.1)
+    border-bottom: none
+    border-top-left-radius: 12px
+    border-top-right-radius: 12px
+    font-weight: bold
+    color: #01FE01
+    padding: 15px 20px 15px
+  .Dropdown
+    @extend .d-flex
+    @extend .flex-column
+    @extend .align-items-center
+    background-color: rgba(255, 255, 255, 0.1)
+    border: 1px solid rgba(255, 255, 255, 0.1)
+    &:not(&:last-of-type)
+      border-bottom: none
+    &:last-of-type
+      border-bottom-left-radius: 12px
+      border-bottom-right-radius: 12px
+    &__title
+      width: 100%
+      cursor: pointer
+      position: relative
+      display: inline-block
+      padding: 15px 0 15px
+      @extend .d-flex
+      &__text
+        width: 100%
+        @extend .flex-grow-1
+        @extend .no-select
+        padding: 0 20px
+        font-weight: bold
+        &::after
+          content: ''
+          position: absolute
+          right: 32px
+          top: 50%
+          width: 32px
+          height: 32px
+          @extend .def-img
+          background-image: url(./img/dropdown__arrow.svg)
+          transform: translateY(-50%) rotate(-90deg)
+          transition: transform .2s
+
+    &__content
+      width: 100%
+      transition: height .2s
+      overflow: hidden
+      &__container
+        padding: 63px 20px 48px
+        @include media-breakpoint-down(md)
+          padding: 32px 20px 48px
+        @include media-breakpoint-down(sm)
+          padding: 21px 20px 31px
+        width: 100%
+        @extend .d-flex
+        @extend .flex-column
+    &--opened
+      .Dropdown__title__text::after
+        transform: translateY(-50%) rotate(0deg)
