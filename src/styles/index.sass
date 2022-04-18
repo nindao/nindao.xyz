@@ -133,12 +133,18 @@ ul
     @extend .align-items-center
     position: relative
     z-index: 100
+    &__anchor
+      cursor: pointer
+      text-decoration: none
+      margin-right: 35px
   .Header
     background-color: $black
     margin-bottom: -64px
     .Logo
       width: 100px
       height: auto
+    &__anchor
+      color: white
   .Footer
     // margin-top: -64px
     background-color: #01FE01
@@ -146,6 +152,9 @@ ul
       width: 40px
       height: 40px
       @extend .ms-5
+    &__anchor
+      color: black
+      line-height: 40px
 
   .Section
     background-color: #F5F5F5
