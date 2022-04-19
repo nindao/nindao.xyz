@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ExternalLink from '../components/ExternalLink'
+import ActionButton from '../components/ActionButton'
 import { Section } from '../components/Store/Types/models'
 
 
@@ -11,12 +11,7 @@ export type BotPropsType = {
 
 const Bot: React.FC<BotPropsType> = ({
   section
-}) => {
-  const page = {
-    botLink: ''
-  }
-
-  return !section ?
+}) => !section ?
     <div />
     :
     <div className='container my-5' id='Bot' >
@@ -38,14 +33,7 @@ const Bot: React.FC<BotPropsType> = ({
                   {section.text}
                 </p>
                 <div className='d-flex flex-row justify-content-end'>
-                  <ExternalLink
-                    newTab
-                    to={page.botLink}
-                    className='Button Button--primary d-inline-block'
-                    disabled
-                  >
-                    Coming Soon
-                  </ExternalLink>
+                  <ActionButton />
                 </div>
               </div>
             </div>
@@ -53,7 +41,6 @@ const Bot: React.FC<BotPropsType> = ({
         </div>
       </div>
     </div>
-}
 
 
 export default Bot
