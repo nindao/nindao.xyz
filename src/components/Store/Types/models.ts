@@ -2,20 +2,20 @@ import { ContentfulItem, File, RichTextNode } from './contentfulTypes'
 
 
 export interface Site extends ContentfulItem {
-  slogan?: string
-  githubLink?: string
-  telegramLink?: string
-  twitterLink?: string
   botLink?: string
   botLinkText?: string
   botLinkEnabled?: boolean
+  githubLink?: string
+  telegramLink?: string
+  twitterLink?: string
+  heroSection?: Section
   botSection?: Section
   aboutSection?: Section
-  gettingStartedSection?: Section
+  instructionsSection?: Section
   faqSection?: Section
 }
 
-interface Section extends ContentfulItem {
+export interface Section extends ContentfulItem {
   title?: string
   text?: RichTextNode
   image?: File

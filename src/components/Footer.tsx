@@ -49,6 +49,7 @@ const Footer: React.FC<FooterPropsType> = () => {
           },
         ].map(link =>
           <ExternalLink
+            key={link.link}
             newTab
             to={link.link}
             className='Footer__link'

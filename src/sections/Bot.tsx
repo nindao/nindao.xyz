@@ -1,22 +1,24 @@
 import React from 'react'
 
-import { Context } from '../Store'
-import ExternalLink from '../ExternalLink'
-
-import GirlImg from '../../styles/img/girl.jpg'
+import ExternalLink from '../components/ExternalLink'
+import { Section } from '../components/Store/Types/models'
 
 
-export type BotPropsType = {}
+export type BotPropsType = {
+  section?: Section
+}
 
 
-const Bot: React.FC<BotPropsType> = () => {
-  const store = React.useContext(Context)
-  // const page = store.contentful.pages[0]
+const Bot: React.FC<BotPropsType> = ({
+  section
+}) => {
   const page = {
     botLink: ''
   }
 
-  return (
+  return !section ?
+    <div />
+    :
     <div className='container my-5' id='Bot' >
       <div className='row'>
         <div className='col'>
@@ -24,30 +26,17 @@ const Bot: React.FC<BotPropsType> = () => {
             <div className='row d-flex justify-content-around'>
               <div className='col-11 col-sm-5 d-flex flex-column justify-content-around my-3'>
                 <img
-                  src={GirlImg}
+                  src={section?.image?.file?.url}
                   className='w-100'
                 />
               </div>
               <div className='col-11 col-sm-5 d-flex flex-column justify-content-center my-3'>
                 <h1 className='h1 mb-4'>
-                  Convert your group chat<br />into DAO
+                  {section.title}
                 </h1>
                 <p className='p'>
-                  NinDAO combines on-chain transactions with open-source protocol, allowing web3 ninjas to coordinate in stealth, right from Telegram.
-                  <br />
-                  Features:
+                  {section.text}
                 </p>
-                <ul>
-                  <li>
-                    Gnosis Safe Multisig
-                  </li>
-                  <li>
-                    Telegram-Metamask Integration
-                  </li>
-                  <li>
-                    On-chain governance
-                  </li>
-                </ul>
                 <div className='d-flex flex-row justify-content-end'>
                   <ExternalLink
                     newTab
@@ -64,7 +53,6 @@ const Bot: React.FC<BotPropsType> = () => {
         </div>
       </div>
     </div>
-  )
 }
 
 
