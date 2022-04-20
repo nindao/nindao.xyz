@@ -19,5 +19,6 @@ export interface Section extends ContentfulItem {
   title?: string
   text?: RichTextNode
   image?: File
+  image2?: File
   subsections?: Section[]
 }
