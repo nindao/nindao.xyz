@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/nindao.xyz/static/css/main.70b2cc0d.css",
+    "main.js": "/nindao.xyz/static/js/main.1884cf0b.js",
+    "static/media/Futura-Bold-Italic.ttf": "/nindao.xyz/static/media/Futura-Bold-Italic.d4a603f6dc11d13d50b9.ttf",
+    "static/media/Futura-Medium-Italic.ttf": "/nindao.xyz/static/media/Futura-Medium-Italic.6180d54a312d36bd0924.ttf",
+    "static/media/Futura-Medium.ttf": "/nindao.xyz/static/media/Futura-Medium.4e762c29ef7b44ca51cb.ttf",
+    "static/media/Futura-Book-Italic.ttf": "/nindao.xyz/static/media/Futura-Book-Italic.2fc529e7b78696a862c1.ttf",
+    "static/media/Futura-Book.ttf": "/nindao.xyz/static/media/Futura-Book.ed19af444f0976dbaf41.ttf",
+    "static/media/Futura-Bold.otf": "/nindao.xyz/static/media/Futura-Bold.b3dd2dcb9b51257052ca.otf",
+    "static/media/logo.svg": "/nindao.xyz/static/media/logo.25ce96d2bd7898f8594f035719708a85.svg",
+    "static/media/github.svg": "/nindao.xyz/static/media/github.da775f3656809b95c26c2f5cc9e95c49.svg",
+    "static/media/twitter.svg": "/nindao.xyz/static/media/twitter.23c3154c282ba18af167128996849959.svg",
+    "index.html": "/nindao.xyz/index.html",
+    "static/media/telegram.svg": "/nindao.xyz/static/media/telegram.acf0ae4254158bd35050bf7aea940c22.svg",
+    "static/media/dropdown__arrow.svg": "/nindao.xyz/static/media/dropdown__arrow.1d19e9387585e4c437cd.svg",
+    "static/media/line.svg": "/nindao.xyz/static/media/line.cd5fe99ab05bd34a2e0e.svg",
+    "main.70b2cc0d.css.map": "/nindao.xyz/static/css/main.70b2cc0d.css.map",
+    "main.1884cf0b.js.map": "/nindao.xyz/static/js/main.1884cf0b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.70b2cc0d.css",
+    "static/js/main.1884cf0b.js"
+  ]
+}
