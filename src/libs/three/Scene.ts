@@ -69,7 +69,9 @@ export default class Scene extends TransitionsHandler {
 
     this.initUnits()
 
-    if (!this.frameId)
+    if (this.frameId)
+      console.log('new Scene created')
+    // if (!this.frameId)
       this.frameId = requestAnimationFrame(this.animate)
   }
 

@@ -3,7 +3,7 @@ import Div100vh from 'react-div-100vh'
 
 import { Provider } from './components/Store'
 import Loader from './components/Loader'
-import Site from './components/Site'
+import MyRoutes from './components/MyRoutes'
 
 import './styles/index.sass'
 
@@ -12,7 +12,7 @@ const App: React.FC = () =>
   <Provider>
     <Div100vh>
       <Loader />
-      <Site />
+      <MyRoutes />
     </Div100vh >
   </Provider>
 

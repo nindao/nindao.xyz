@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Context } from './Store'
-import Header from './Header'
-import Footer from './Footer'
+import { Context } from '../components/Store'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 import Hero from '../sections/Hero'
 import Bot from '../sections/Bot'
 import About from '../sections/About'

@@ -25,6 +25,7 @@ const Hero: React.FC<HeroPropsType> = ({
           <img
             src={section.image2?.file?.url}
             className='w-100 mb-3'
+            alt=''
           />
           <p className='p text-white text-center'>
             {section.title}
