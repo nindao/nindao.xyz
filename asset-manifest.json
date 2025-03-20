@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.52068902.css",
+    "main.css": "/static/css/main.5c4b7b9d.css",
     "main.js": "/static/js/main.6441a2d2.js",
     "static/media/Futura-Bold-Italic.ttf": "/static/media/Futura-Bold-Italic.d4a603f6dc11d13d50b9.ttf",
     "static/media/Futura-Medium-Italic.ttf": "/static/media/Futura-Medium-Italic.6180d54a312d36bd0924.ttf",
@@ -15,11 +15,11 @@
     "static/media/telegram.svg": "/static/media/telegram.acf0ae4254158bd35050bf7aea940c22.svg",
     "static/media/dropdown__arrow.svg": "/static/media/dropdown__arrow.1d19e9387585e4c437cd.svg",
     "static/media/line.svg": "/static/media/line.cd5fe99ab05bd34a2e0e.svg",
-    "main.52068902.css.map": "/static/css/main.52068902.css.map",
+    "main.5c4b7b9d.css.map": "/static/css/main.5c4b7b9d.css.map",
     "main.6441a2d2.js.map": "/static/js/main.6441a2d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.52068902.css",
+    "static/css/main.5c4b7b9d.css",
     "static/js/main.6441a2d2.js"
   ]
 }
