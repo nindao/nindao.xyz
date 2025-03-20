@@ -10,6 +10,7 @@ import {
   parseContentfulItems,
   createContentfulClient
 } from '../../libs/utils/contentful'
+import contentfulDataUnparsed from '../../libs/utils/contentfulDataUnparsed'
 
 
 class Provider extends React.Component<{}, StateType> {
@@ -26,9 +27,9 @@ class Provider extends React.Component<{}, StateType> {
     const client = createContentfulClient()
 
     this.setState({ ready: false })
-    this.setState({
-      contentfulData: await parseContentfulItems((await client.getEntries({ limit: 200 })).items)
-    })
+    // const contentfulData = await parseContentfulItems((await client.getEntries({ limit: 200 })).items)
+    const contentfulData = await parseContentfulItems(contentfulDataUnparsed)
+    this.setState({ contentfulData })
     this.setState({ ready: true })
 
     console.log(this.state.contentfulData)
