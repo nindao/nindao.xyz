@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 
 export type ExternalLinkProps = {
   to: string
   newTab?: boolean
   className?: string
-  children?: JSX.Element | string
+  children?: ReactNode | string
   disabled?: boolean
 }
 

@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 
 export type SectionWithBackgroundPropsType = {
-  children: JSX.Element | JSX.Element[]
+  children: ReactNode | ReactNode[]
   backgroundImage?: string
-  backgroundContent?: JSX.Element | JSX.Element[]
+  backgroundContent?: ReactNode | ReactNode[]
   darkened?: boolean
 }
 
