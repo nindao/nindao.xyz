@@ -22,6 +22,8 @@ const Purchasetnx: React.FC = () => {
             <br /><br />
             We will reach out to you via the email you provided to discuss any further customizations.
             <br /><br />
+            Payment is handled by Digistore24. 
+            <br /><br />
             — Your NinDAO Team
           </div>
         </div>
