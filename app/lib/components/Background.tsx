@@ -1,11 +1,5 @@
 import React from 'react'
 
-import ThreeScene from './ThreeScene'
-// import Logo from '../libs/three/units/Logo'
-import Cubes from '../libs/three/units/Cubes'
-import Lights from '../libs/three/units/Lights'
-import Environment from '../libs/three/units/Environment'
-
 
 export type BackgroundPropsType = {}
 
