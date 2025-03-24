@@ -12,7 +12,7 @@ export type BackgroundPropsType = {}
 
 const Background: React.FC<BackgroundPropsType> = () =>
   <div className='Background'>
-    <ThreeScene
+    {/* <ThreeScene
       id="3d-scene"
       units={{
         // arc: {
@@ -32,7 +32,7 @@ const Background: React.FC<BackgroundPropsType> = () =>
         //   disabled: false,
         // },
       }}
-    />
+    /> */}
   </div>
 
 

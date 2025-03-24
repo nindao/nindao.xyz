@@ -33,6 +33,15 @@ const Hero: React.FC<HeroPropsType> = ({
           <ActionButton />
         </div>
       </div>
+      <div className='container d-flex flex-row justify-content-center position-relative mt-5'>
+        <div className='col-11 col-sm-10 d-flex flex-column justify-content-center bg-gray'>
+          <p className='p text-white text-center'>
+            After your purchase, you will receive a link to a short form. Once completed, you’ll gain access to the private GitHub repository and the software.
+            <br /><br />
+            For custom adjustments, feel free to contact us after your purchase.
+          </p>
+        </div>
+      </div>
     </SectionWithBackground>
 
 
